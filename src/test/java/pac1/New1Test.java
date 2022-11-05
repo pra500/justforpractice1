@@ -90,6 +90,8 @@ public class New1Test {
 	public void afterClass() {
 		
 		driver.quit();
+		//closing
+		//closing
 	}
 
 }
