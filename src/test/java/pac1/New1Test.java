@@ -88,6 +88,7 @@ public class New1Test {
 
 	@AfterClass
 	public void afterClass() {
+		//closing the driver*************************
 		driver.quit();
 	}
 
