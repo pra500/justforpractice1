@@ -1,0 +1,162 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=5540, tid=0x0000000000002680
+#
+# JRE version:  (8.0_202-b08) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.202-b08 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000023a3800):  JavaThread "Unknown thread" [_thread_in_vm, id=9856, stack(0x0000000002290000,0x0000000002390000)]
+
+Stack: [0x0000000002290000,0x0000000002390000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000023a3800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=9856, stack(0x0000000002290000,0x0000000002390000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x0000000081600000, size: 2026 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5d00000, 0x00000000d8780000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5d00000,0x00000000d5da6670,0x00000000d7d80000)
+  from space 5120K, 0% used [0x00000000d8280000,0x00000000d8280000,0x00000000d8780000)
+  to   space 5120K, 0% used [0x00000000d7d80000,0x00000000d7d80000,0x00000000d8280000)
+ ParOldGen       total 87552K, used 0K [0x0000000081600000, 0x0000000086b80000, 0x00000000d5d00000)
+  object space 87552K, 0% used [0x0000000081600000,0x0000000081600000,0x0000000086b80000)
+ Metaspace       used 751K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 76K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011860000,0x0000000011c60000] byte_map_base: 0x0000000011455000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000052045ce0
+ Begin Bits: [0x0000000012310000, 0x00000000142b8000)
+ End Bits:   [0x00000000142b8000, 0x0000000016260000)
+
+Polling page: 0x0000000000a00000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x00000000024a0000, 0x0000000002710000, 0x00000000114a0000]
+ total_blobs=58 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.043 loading class java/lang/Short
+Event: 0.043 loading class java/lang/Short done
+Event: 0.043 loading class java/lang/Integer
+Event: 0.044 loading class java/lang/Integer done
+Event: 0.044 loading class java/lang/Long
+Event: 0.044 loading class java/lang/Long done
+Event: 0.044 loading class java/lang/NullPointerException
+Event: 0.045 loading class java/lang/NullPointerException done
+Event: 0.045 loading class java/lang/ArithmeticException
+Event: 0.045 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff690f30000 - 0x00007ff690f67000 	C:\Program Files\Java\jre1.8.0_202\bin\javaw.exe
+0x00007ff9d3c30000 - 0x00007ff9d3e25000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff9d24e0000 - 0x00007ff9d259d000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff9d1590000 - 0x00007ff9d185d000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff9ce9c0000 - 0x00007ff9cea50000 	C:\Windows\SYSTEM32\apphelp.dll
+0x00007ff9d3b40000 - 0x00007ff9d3bee000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff9d34f0000 - 0x00007ff9d358e000 	C:\Windows\System32\msvcrt.dll
+0x00007ff9d26e0000 - 0x00007ff9d277c000 	C:\Windows\System32\sechost.dll
+0x00007ff9d2180000 - 0x00007ff9d22a5000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff9d3350000 - 0x00007ff9d34f0000 	C:\Windows\System32\USER32.dll
+0x00007ff9d1960000 - 0x00007ff9d1982000 	C:\Windows\System32\win32u.dll
+0x00007ff9d25d0000 - 0x00007ff9d25fa000 	C:\Windows\System32\GDI32.dll
+0x00007ff9d1450000 - 0x00007ff9d155b000 	C:\Windows\System32\gdi32full.dll
+0x00007ff9d13b0000 - 0x00007ff9d144d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff9d1860000 - 0x00007ff9d1960000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff9c2310000 - 0x00007ff9c25aa000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff9d1eb0000 - 0x00007ff9d1ee0000 	C:\Windows\System32\IMM32.DLL
+0x0000000051660000 - 0x0000000051732000 	C:\Program Files\Java\jre1.8.0_202\bin\msvcr100.dll
+0x0000000051820000 - 0x00000000520c5000 	C:\Program Files\Java\jre1.8.0_202\bin\server\jvm.dll
+0x00007ff9d1d40000 - 0x00007ff9d1d48000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff9b8e80000 - 0x00007ff9b8ea7000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff9ce030000 - 0x00007ff9ce039000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff9d1d50000 - 0x00007ff9d1dbb000 	C:\Windows\System32\WS2_32.dll
+0x00007ff9c7540000 - 0x00007ff9c754a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff9cd8a0000 - 0x00007ff9cd8af000 	C:\Program Files\Java\jre1.8.0_202\bin\verify.dll
+0x00007ff9c5f70000 - 0x00007ff9c5f99000 	C:\Program Files\Java\jre1.8.0_202\bin\java.dll
+0x00007ff9caff0000 - 0x00007ff9cb006000 	C:\Program Files\Java\jre1.8.0_202\bin\zip.dll
+
+VM Arguments:
+jvm_args: -ea -Dfile.encoding=Cp1252 
+java_command: org.testng.remote.RemoteTestNG -serport 63388 -protocol json -d C:\Users\dell\eclipse-workspace\Prep\test-output C:\Users\dell\AppData\Local\Temp\testng-eclipse--509731081\testng-customsuite.xml
+java_class_path (initial): C:\Users\dell\eclipse\jee-2020-03\eclipse\configuration\org.eclipse.osgi\1001\0\.cp\lib\testng-remote.jar;C:\Users\dell\eclipse-workspace\Prep\target\test-classes;C:\Users\dell\eclipse-workspace\Prep\target\classes;C:\Users\dell\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\dell\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\dell\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\dell\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\dell\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\dell\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\dell\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\dell\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\dell\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\dell\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\dell\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\dell\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\dell\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\dell\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\dell\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\dell\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\dell\.m2\repository\com\google\j2objc\j2objc-
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_202
+PATH=C:/Program Files/Java/jre1.8.0_202/bin/server;C:/Program Files/Java/jre1.8.0_202/bin;C:/Program Files/Java/jre1.8.0_202/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\dell\Downloads\apache-maven-3.8.6\bin;C:\Users\dell\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_202\bin;;C:\Users\dell\eclipse\jee-2020-03\eclipse;
+USERNAME=dell
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 69 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 19041 (10.0.19041.1706)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 8290320k(1611076k free), swap 10387472k(5388k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.202-b08) for windows-amd64 JRE (1.8.0_202-b08), built on Dec 15 2018 19:54:30 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sat Oct 01 08:06:06 2022
+timezone: India Standard Time
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
