@@ -25,7 +25,8 @@ public class New1Test {
 
 	@BeforeClass
 	public void beforeClass() {
-
+            
+		//driver initialization****************
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(18, TimeUnit.SECONDS);
@@ -35,6 +36,7 @@ public class New1Test {
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("pragtigupta18@gmail.com");
 		driver.findElement(By.xpath("//input[@id='passwd']")).sendKeys("pra18@123");
 		driver.findElement(By.xpath("//span[normalize-space()='Sign in']")).click();
+		
 	}
 
 	// TC1:Verify if the user clicks on "Our stores" link then he will be landing on
